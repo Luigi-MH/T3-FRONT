@@ -1,1 +1,13 @@
-<p>inicio works!</p>
+<app-header></app-header>
+
+<div class="container text-center">
+    <h1>PRODUCTOS</h1>
+    <div class="row bg-dark p-3">
+        @for (producto of productoService.productos; track $index) {
+            <div class="col-12">
+                <h4 class="bg-dark">{{producto.nombreProducto}}</h4>
+                <h3>{{producto.stockActual}}</h3>
+            </div>
+        }
+    </div>
+</div>
