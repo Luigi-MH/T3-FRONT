@@ -9,7 +9,7 @@ export class ProductoServiceService {
   producto: any = null;
   productos: any[] = [];
 
-  readonly API_T3_BACK = 'http://localhost:8080/api/mhl/producto';
+  readonly API_T3_BACK = 'http://localhost:9090/api/mhl/producto';
 
   constructor( private http: HttpClient) { }
 

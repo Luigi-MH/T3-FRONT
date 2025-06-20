@@ -2,10 +2,10 @@
 
 <div class="container text-center">
     <h1>PRODUCTOS</h1>
-    <div class="row bg-dark p-3">
+    <div class="row  p-3">
         @for (producto of productoService.productos; track $index) {
             <div class="col-12">
-                <h4 class="bg-dark">{{producto.nombreProducto}}</h4>
+                <h4 class="">{{producto.nombreProducto}}</h4>
                 <h3>{{producto.stockActual}}</h3>
             </div>
         }
