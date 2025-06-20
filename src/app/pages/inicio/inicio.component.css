@@ -1,0 +1,22 @@
+.producto{
+    text-align: center;
+}
+
+.producto :hover{
+    background: #2736c2;
+    color: #fff
+}
+
+.producto__item{
+    text-decoration: none;
+    color: #000;
+}
+
+.producto__nombre{
+    font-size: 1.8rem;
+}
+
+.producto__stock{
+    color: #888;
+    font-size: 1.3rem;
+}

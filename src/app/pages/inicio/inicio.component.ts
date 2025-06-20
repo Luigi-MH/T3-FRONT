@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from "../../components/header/header.component";
 import { ProductoServiceService } from '../../services/producto-service.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, RouterLink],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })

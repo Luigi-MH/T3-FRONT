@@ -8,15 +8,25 @@ import { Injectable } from '@angular/core';
 export class ProductoServiceService {
   producto: any = null;
   productos: any[] = [];
+  movimiento: any= null;
+  movimientos: any[] = [];
 
-  readonly API_T3_BACK = 'http://localhost:9090/api/mhl/producto';
+  readonly API_T3_BACK = 'http://localhost:9090/api/mhl';
 
   constructor( private http: HttpClient) { }
 
   getProductos()
   {
-    console.log('InicioComponent cargado');
-    return this.http.get<any>(this.API_T3_BACK);
-    //return this.http.get<any>(`${this.API_T3_BACK}/producto`);
+    return this.http.get<any>(`${this.API_T3_BACK}/producto`);
+  }
+
+  getProducto(idProducto: string)
+  {
+    return this.http.get<any>(`${this.API_T3_BACK}/producto/${idProducto}`);
+  }
+
+  getHistorial(idProducto: string)
+  {
+    return this.http.get<any>(`${this.API_T3_BACK}/movimiento/${idProducto}`);
   }
 }

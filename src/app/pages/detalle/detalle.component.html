@@ -1,1 +1,51 @@
-<p>detalle works!</p>
+<div class="container my-5 d-flex justify-content-center">
+  <div class="card detalle-producto shadow-lg">
+    <div class="card-body">
+      <h2 class="text-center text-primary mb-4">
+        Detalle del Producto
+      </h2>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Nombre del Producto:</label>
+        <p class="form-control-plaintext fs-5">{{ productoService.producto?.nombreProducto }}</p>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">ID:</label>
+        <p class="form-control-plaintext">{{ productoService.producto?.idProducto }}</p>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Stock Actual:</label>
+        <p class="form-control-plaintext">{{ productoService.producto?.stockActual }}</p>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Stock Mínimo:</label>
+        <p class="form-control-plaintext">{{ productoService.producto?.stockMinimo }}</p>
+      </div>
+
+      <div>
+        <h2 class="text-center text-primary mb-4">
+            Historial
+        </h2>
+        <div class="row">
+            @for (movimiento of productoService.movimientos; track $index) {
+                <div>
+                    <p>{{movimiento?.movimientoID}}</p>
+                </div>
+                <div>
+                    <p>{{movimiento?.cantidad}}</p>
+                </div>
+                <div>
+                    <p>{{movimiento?.tipoMovimiento}}</p>
+                </div>
+                <div>
+                    <p>{{movimiento?.fechaMovimiento}}</p>
+                </div>
+            }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
